@@ -1,7 +1,6 @@
 import { css } from 'styled-components';
 
-export const FlexCenter = css`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+export const Border = (radius, stroke = '1', color = '#e9e9e9') => css`
+  border-radius: ${radius};
+  border: ${stroke}px solid ${color};
 `;
