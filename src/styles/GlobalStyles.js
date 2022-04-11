@@ -13,6 +13,9 @@ const GlobalStyles = createGlobalStyle`
     ul,dl,dt,dd,li{
       list-style: none;
     }
+    body{
+        font-family: 'Noto Sans KR', sans-serif;
+    }
 `;
 
 export default GlobalStyles;
