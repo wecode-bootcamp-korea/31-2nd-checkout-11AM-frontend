@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "프룩스 플럭스 호텔",
+    "category": "제주시-민박",
+    "region": "제주시",
+    "person": "2",
+    "price": "160,000",
+    "thumnail": "https://images.stayfolio.com/system/pictures/images/000/118/398/small/7f1a0efc10d9341ab34eada494e5ad03d8f927b6.jpg?1649226638"
+  },
+  {
+    "id": 2,
+    "title": "프룩스 플럭스 호텔",
+    "category": "게스트하우스",
+    "region": "서부",
+    "person": "2",
+    "price": "160,000",
+    "thumnail": "https://images.stayfolio.com/system/pictures/images/000/118/398/small/7f1a0efc10d9341ab34eada494e5ad03d8f927b6.jpg?1649226638"
+  },
+  {
+    "id": 3,
+    "title": "프룩스 플럭스 호텔",
+    "category": "민박",
+    "region": "서귀포시",
+    "person": "2",
+    "price": "160,000",
+    "thumnail": "https://images.stayfolio.com/system/pictures/images/000/118/398/small/7f1a0efc10d9341ab34eada494e5ad03d8f927b6.jpg?1649226638"
+  },
+  {
+    "id": 4,
+    "title": "프룩스 플럭스 호텔",
+    "category": "민박",
+    "region": "동부",
+    "person": "2",
+    "price": "160,000",
+    "thumnail": "https://images.stayfolio.com/system/pictures/images/000/118/398/small/7f1a0efc10d9341ab34eada494e5ad03d8f927b6.jpg?1649226638"
+  },
+  {
+    "id": 5,
+    "title": "프룩스 플럭스 호텔",
+    "category": "민박",
+    "region": "동부",
+    "person": "2",
+    "price": "160,000",
+    "thumnail": "https://images.stayfolio.com/system/pictures/images/000/118/398/small/7f1a0efc10d9341ab34eada494e5ad03d8f927b6.jpg?1649226638"
+  },
+  {
+    "id": 6,
+    "title": "프룩스 플럭스 호텔",
+    "category": "게스트하우스",
+    "region": "동부",
+    "person": "2",
+    "price": "160,000",
+    "thumnail": "https://images.stayfolio.com/system/pictures/images/000/118/398/small/7f1a0efc10d9341ab34eada494e5ad03d8f927b6.jpg?1649226638"
+  }
+]
