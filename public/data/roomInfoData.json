@@ -1,0 +1,47 @@
+{
+  "id": 1,
+  "room_images": [
+    "https://images.stayfolio.com/system/pictures/images/000/104/091/original/0a0e18a3df051b28d829e5b4b8d5edfd4352890f.jpg?1639116482",
+    "https://images.stayfolio.com/system/pictures/images/000/104/177/original/8bffc3dd0e10b91d76081372e151e06b1465747f.jpg?1639124479",
+    "https://images.stayfolio.com/system/pictures/images/000/104/112/original/7be9d69e5873178a103dbcca484f941217dfb6fe.jpg?1639117392",
+    "https://images.stayfolio.com/system/pictures/images/000/104/092/original/f19fc17e248a5b5ed31aa38bfbb2cb4e0b660f2f.jpg?1639116511",
+    "https://images.stayfolio.com/system/pictures/images/000/104/178/original/fd4fb3af7755ec8a898887cfbdf9eacd5f66df1a.jpg?1639124508"
+  ],
+  "residence_name": "여름의 집",
+  "name": "여름 하나",
+  "price": 200000,
+  "description": "화장실, 파우더룸, 샤워 욕조룸으로 이루어져 있습니다. 한옥의 옛모습과 현대적인 디자인을 조화시킨 한옥 시호일의 거실에서는 앞뜰과 뒷뜰을 동시에 감상할 수 있습니다.",
+  "area": 85,
+  "preson": 2,
+  "max_preson": 4,
+  "bed": 1,
+  "residence_id": 1,
+  "feature": [
+    "실내 스파",
+    "정원",
+    "독립 키친",
+    "독립 화장실",
+    "빅테이블",
+    "주차"
+  ],
+  "amenities": [
+    "TV",
+    "냉장고",
+    "헤어드라이어",
+    "스피커",
+    "전기포트",
+    "전자레인지",
+    "샴푸",
+    "컨디셔너",
+    "바디워시",
+    "핸드워시",
+    "와인",
+    "오프너",
+    "와인잔",
+    "생수",
+    "토스터기",
+    "커피머신",
+    "다기",
+    "룸 슬리퍼"
+  ]
+}
