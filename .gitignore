@@ -26,3 +26,6 @@ yarn-error.log*
 # Eslint
 .eslintcache
 node_modules
+
+#API KEY
+.env
