@@ -13,8 +13,9 @@ const GlobalStyles = createGlobalStyle`
     ul,dl,dt,dd,li{
       list-style: none;
     }
-    body{
+    html,body{
         font-family: 'Noto Sans KR', sans-serif;
+        margin:0 auto;
     }
 `;
 
