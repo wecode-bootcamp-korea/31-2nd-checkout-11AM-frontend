@@ -1,9 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const CardList = ({ name, category, region, room_info, thumbnail }) => {
+const CardList = ({
+  id,
+  name,
+  category,
+  region,
+  room_info,
+  thumbnail,
+  goToDetail,
+}) => {
   return (
-    <CardListLayout>
+    <CardListLayout
+      onClick={() => {
+        goToDetail(id);
+      }}
+    >
       <CardTitle>{name}</CardTitle>
       <CardSub>{category}</CardSub>
       <CardInfo>
@@ -28,6 +40,7 @@ const CardListLayout = styled.li`
   height: 350px;
   padding-top: 70px;
   margin-bottom: 80px;
+  cursor: pointer;
 `;
 
 const CardTitle = styled.p`

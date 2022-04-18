@@ -21,6 +21,7 @@ const List = () => {
   const [stayModalActive, setStayModalActive] = useState(false);
   const [searchValue, setSearchValue] = useState('');
   const [selectLocation, setSelectLocation] = useState('');
+  const [limit, setLimit] = useState(10);
   const [queryArray, setQueryArray] = useState({
     search: '',
     person: 0,
@@ -33,9 +34,11 @@ const List = () => {
   const location = useLocation();
   const [values, setValues] = useState(DATE_OBJECT);
 
-  const urlApi = `?${queryArray.person ? `people=${queryArray.person}` : ''}${
-    queryArray.stayType ? `&category=${queryArray.stayType}` : ''
-  }${queryArray.region ? `&region=${queryArray.region}` : ''}${
+  const urlApi = `?limit=${limit}&offset=0${
+    queryArray.person ? `people=${queryArray.person}` : ''
+  }${queryArray.stayType ? `&category=${queryArray.stayType}` : ''}${
+    queryArray.region ? `&region=${queryArray.region}` : ''
+  }${
     queryArray.startDatePick
       ? `&check_in=${queryArray.startDatePick}&check_out=${queryArray.endDatePick}`
       : ''
@@ -65,6 +68,19 @@ const List = () => {
       endDatePick,
     }));
   }, [startDatePick, endDatePick]);
+
+  const goToDetail = id => {
+    navigate(
+      `/residences/${id}${
+        queryArray.startDatePick
+          ? `?check_in=${queryArray.startDatePick}&check_out=${queryArray.endDatePick}`
+          : ''
+      }`,
+      {
+        state: { startDatePick: startDatePick, endDatePick: endDatePick },
+      }
+    );
+  };
 
   const handleSearch = e => {
     e.preventDefault();
@@ -180,9 +196,16 @@ const List = () => {
       />
       <CardWrap>
         {cardList.map((card, index) => (
-          <CardList key={index} {...card} />
+          <CardList key={index} {...card} goToDetail={goToDetail} />
         ))}
       </CardWrap>
+      <MoreCardButton
+        onClick={() => {
+          setLimit(limit + 10);
+        }}
+      >
+        더보기
+      </MoreCardButton>
     </ListWrap>
   );
 };
@@ -216,4 +239,17 @@ const CardWrap = styled.ul`
   border: solid #e9e9e9;
   border-width: 2px 0 1px;
   margin-top: 80px;
+`;
+
+const MoreCardButton = styled.button`
+  display: block;
+  font-size: 14px;
+  width: 150px;
+  background: #000;
+  color: #fff;
+  border: #000;
+  padding: 8px 0;
+  border-radius: 20px;
+  margin: 40px auto 0;
+  cursor: pointer;
 `;
