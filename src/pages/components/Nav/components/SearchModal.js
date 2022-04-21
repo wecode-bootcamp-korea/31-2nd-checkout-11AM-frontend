@@ -83,8 +83,8 @@ const CITY_NAME = [
   { id: 1, name: '제주전체' },
   { id: 2, name: '제주시' },
   { id: 3, name: '서귀포시' },
-  { id: 4, name: '동부권' },
-  { id: 5, name: '서부권' },
+  { id: 4, name: '동부' },
+  { id: 5, name: '서부' },
 ];
 
 const SearchModalLayout = styled.div`
