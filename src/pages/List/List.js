@@ -22,20 +22,21 @@ const List = () => {
   const [searchValue, setSearchValue] = useState('');
   const [selectLocation, setSelectLocation] = useState('');
   const [limit, setLimit] = useState(10);
+  const location = useLocation();
+  const regionValue = location.search.slice(8, location.search.length);
   const [queryArray, setQueryArray] = useState({
     search: '',
     person: 0,
     stayType: '',
     startDatePick: '',
     endDatePick: '',
-    region: '',
+    region: `${regionValue}`,
   });
   const navigate = useNavigate();
-  const location = useLocation();
   const [values, setValues] = useState(DATE_OBJECT);
 
   const urlApi = `?limit=${limit}&offset=0${
-    queryArray.person ? `people=${queryArray.person}` : ''
+    queryArray.person ? `&people=${queryArray.person}` : ''
   }${queryArray.stayType ? `&category=${queryArray.stayType}` : ''}${
     queryArray.region ? `&region=${queryArray.region}` : ''
   }${
