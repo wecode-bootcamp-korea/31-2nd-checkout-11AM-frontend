@@ -23,7 +23,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   position: absolute;
-  z-index: 2;
+  z-index: 30;
   width: 100%;
   height: 100%;
   top: 0;
@@ -48,7 +48,7 @@ const Background = styled.div`
 `;
 
 const ModalBlock = styled.div`
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 10px;
@@ -76,6 +76,7 @@ const ModalBlock = styled.div`
 
 const Close = styled.button`
   position: absolute;
+  z-index: 99;
   top: 100px;
   right: 40px;
   width: 50px;
