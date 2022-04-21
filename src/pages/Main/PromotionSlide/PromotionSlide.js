@@ -12,7 +12,7 @@ function PromotionSlide({ promotionList }) {
   const navigate = useNavigate();
 
   const goToDetail = id => {
-    navigate(`/residenecs/${id}`);
+    navigate(`/residences/${id}`, { state: { bookingDays: 0 } });
   };
 
   return (
@@ -31,7 +31,7 @@ function PromotionSlide({ promotionList }) {
       >
         {residences_list?.map(
           (
-            { id, image, name, room_info, region, sub_Name, category },
+            { id, thumbnail, name, room_info, region, sub_Name, category },
             index
           ) => {
             return (
@@ -58,7 +58,7 @@ function PromotionSlide({ promotionList }) {
                   </ContentBox>
                 </PromotionBox>
                 <SlideImg
-                  src={image}
+                  src={thumbnail}
                   onClick={() => {
                     goToDetail(id);
                   }}

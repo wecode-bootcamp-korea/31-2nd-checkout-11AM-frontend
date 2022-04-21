@@ -8,6 +8,7 @@ import { MAIN } from '../.././config';
 
 const Main = () => {
   const [productData, setProductData] = useState([]);
+
   const [promotionData, setPromotionData] = useState([]);
 
   useEffect(() => {

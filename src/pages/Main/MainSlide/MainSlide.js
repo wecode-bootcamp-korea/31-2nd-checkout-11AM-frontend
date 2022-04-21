@@ -88,6 +88,7 @@ const Box = styled(Swiper)`
 const SlideImg = styled.img`
   width: 100%;
   height: 850px;
+  object-fit: cover;
   cursor: pointer;
 `;
 

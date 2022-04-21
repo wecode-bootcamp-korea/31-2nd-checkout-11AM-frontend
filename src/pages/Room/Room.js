@@ -32,6 +32,8 @@ const Room = () => {
   const [checkInData, checkOutData] = bookingData;
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     const url = `${API.LIST}/${params.residence}/room/${params.room}`;
 
     axios.get(url).then(response => {
