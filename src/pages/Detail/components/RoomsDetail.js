@@ -6,7 +6,7 @@ import { Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-const RoomsDetail = ({ rooms, name, checkInData, checkOutData }) => {
+const RoomsDetail = ({ rooms, name }) => {
   const navigate = useNavigate();
 
   const goToRoomDetail = id => {
