@@ -78,7 +78,11 @@ const List = () => {
           : ''
       }`,
       {
-        state: { startDatePick: startDatePick, endDatePick: endDatePick },
+        state: {
+          startDatePick: values[0].format('YYYY/MM/DD'),
+          endDatePick: values[1].format('YYYY/MM/DD'),
+          bookingDays: values[0].daysLeft - values[1].daysLeft,
+        },
       }
     );
   };
