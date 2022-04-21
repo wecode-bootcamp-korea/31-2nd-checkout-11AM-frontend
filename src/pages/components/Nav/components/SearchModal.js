@@ -32,7 +32,7 @@ const SearchModal = ({ handleModal }) => {
       { indices: false }
     );
     if (value.filter === '제주전체') {
-      navigate('/list');
+      navigate('/list?limit=10&offset=0');
     } else {
       navigate(`/list?${searchQueryString}`);
     }
