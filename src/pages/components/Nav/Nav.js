@@ -126,7 +126,7 @@ const AlignCenter = css`
 
 const NavLayout = styled.header`
   position: fixed;
-  z-index: 1;
+  z-index: 10000;
   width: 100%;
   height: 76px;
   background-color: #ffffff;

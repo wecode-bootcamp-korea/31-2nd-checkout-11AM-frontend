@@ -15,10 +15,10 @@ function Router() {
         <Route path="/" element={<RouteWrapper />}>
           <Route index element={<Main />} />
           <Route path="/list" element={<List />} />
-          <Route path="/detail" element={<Detail />} />
           <Route path="/login" element={<Login />} />
           <Route path="/users/signin" element={<KakaoLogin />} />
           <Route path="/residences/:residence/room/:room" element={<Room />} />
+          <Route path="/residences/:id" element={<Detail />} />
         </Route>
       </Routes>
     </BrowserRouter>

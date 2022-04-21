@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import BookingDatePicker from './BookingDatePicker';
-import ReserveButton from './ReserveButton';
 
 const BookingSummary = ({
+  name,
   setBookingData,
   bookingData,
   checkOutData,
   checkInData,
-  residenceName,
+  locationState,
 }) => {
   const [modalDatePiker, setModalDatePiker] = useState(false);
 
@@ -18,13 +18,11 @@ const BookingSummary = ({
 
   return (
     <BookingSummaryLayout>
-      <ResidenceName>{residenceName}</ResidenceName>
+      <ResidenceName>{name}</ResidenceName>
       <Date>
         <DatePiker onClick={handleModal}>
-          {checkOutData
-            ? `${checkInData.format('YYYY/MM/DD')} - ${checkOutData.format(
-                'YYYY/MM/DD'
-              )} | ${checkInData.daysLeft - checkOutData.daysLeft}박`
+          {locationState.bookingDays !== 0
+            ? `${checkInData} ~ ${checkOutData}`
             : `날짜를 선택해주세요.`}
           <ArrowDown
             src="https://www.stayfolio.com/web/images/arw_select.png"
@@ -39,9 +37,8 @@ const BookingSummary = ({
           bookingData={bookingData}
         />
       )}
-      <BookingBtnWrapper>
-        <ReserveButton>예약하기</ReserveButton>
-      </BookingBtnWrapper>
+
+      <div />
     </BookingSummaryLayout>
   );
 };
@@ -49,7 +46,7 @@ const BookingSummary = ({
 export default BookingSummary;
 
 const BookingSummaryLayout = styled.div`
-  ${({ theme }) => theme.flexLayout('row', 'center', 'space-between')};
+  ${({ theme }) => theme.flexLayout('row', 'center', 'space-between')}
   width: 1290px;
   height: 60px;
   margin: 60px auto 0;
@@ -76,9 +73,5 @@ const DatePiker = styled.div`
 const ArrowDown = styled.img`
   width: 20px;
   height: 20px;
-`;
-
-const BookingBtnWrapper = styled.div`
-  width: 240px;
-  height: 40px;
+  padding-bottom: 5px;
 `;

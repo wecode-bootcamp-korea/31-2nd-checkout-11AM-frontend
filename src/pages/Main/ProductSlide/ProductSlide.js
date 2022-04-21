@@ -12,7 +12,7 @@ function ProductSlide({ productList }) {
   const navigate = useNavigate();
 
   const goToDetail = id => {
-    navigate(`/residenecs/${id}`);
+    navigate(`/residences/${id}`, { state: { bookingDays: 0 } });
   };
 
   return (
@@ -32,12 +32,12 @@ function ProductSlide({ productList }) {
         className="mySwiper"
       >
         {residences_list?.map(
-          ({ id, name, region, image, room_info }, index) => {
+          ({ id, name, region, thumbnail, room_info }, index) => {
             return (
               <SwiperSlide key={index} id={id}>
                 <ProductBox>
                   <SlideImg
-                    src={image}
+                    src={thumbnail}
                     onClick={() => {
                       goToDetail(id);
                     }}
