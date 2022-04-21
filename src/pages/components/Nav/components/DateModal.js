@@ -8,7 +8,6 @@ import ModalFrame from '../../ModalFrame';
 const DateModal = ({ handleModal }) => {
   const [dates, setDates] = useState([]);
   const navigate = useNavigate();
-
   const goToPage = () => {
     const firstDate = dates[0].format('YYYY-MM-DD');
     const lastDate = dates[1].format('YYYY-MM-DD');
@@ -18,7 +17,7 @@ const DateModal = ({ handleModal }) => {
     );
     if (dates.length > 1) {
       navigate(`list?${dateQueryString}`, {
-        state: { startDatePick: firstDate, endDatePick: lastDate },
+        state: { startDatePick: dates[0], endDatePick: dates[1] },
       });
       handleModal();
     }
@@ -69,6 +68,7 @@ const MONTH = [
 const WEEKDAYS = ['일', '월', '화', '수', '목', '금', '토'];
 
 const DateModalLayout = styled.div`
+  z-index: 30;
   padding: 0 20px;
   width: 100%;
 `;
