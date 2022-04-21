@@ -17,7 +17,7 @@ const DateModal = ({ handleModal }) => {
     );
     if (dates.length > 1) {
       navigate(`list?${dateQueryString}`, {
-        state: { startDatePick: dates[0], endDatePick: dates[1] },
+        state: { startDatePick: firstDate, endDatePick: lastDate },
       });
       handleModal();
     }

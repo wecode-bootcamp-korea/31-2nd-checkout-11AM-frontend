@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import BookingDatePicker from './BookingDatePicker';
 
@@ -11,6 +11,14 @@ const BookingSummary = ({
   locationState,
 }) => {
   const [modalDatePiker, setModalDatePiker] = useState(false);
+  const [bookingDayData, setBookingDayData] = useState(
+    locationState.bookingDays
+  );
+
+  useEffect(() => {
+    checkOutData &&
+      setBookingDayData(checkInData.daysLeft - checkOutData.daysLeft);
+  }, [checkInData, checkOutData]);
 
   const handleModal = () => {
     setModalDatePiker(!modalDatePiker);
@@ -21,7 +29,7 @@ const BookingSummary = ({
       <ResidenceName>{name}</ResidenceName>
       <Date>
         <DatePiker onClick={handleModal}>
-          {locationState.bookingDays !== 0
+          {bookingDayData !== 0 || checkOutData
             ? `${checkInData} ~ ${checkOutData}`
             : `날짜를 선택해주세요.`}
           <ArrowDown

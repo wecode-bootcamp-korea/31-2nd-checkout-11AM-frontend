@@ -2,7 +2,12 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { Calendar } from 'react-multi-date-picker';
 
-const BookingDatePicker = ({ handleModal, setBookingData, bookingData }) => {
+const BookingDatePicker = ({
+  handleModal,
+  setBookingData,
+  bookingData,
+  handleBookingDayData,
+}) => {
   useEffect(() => {
     document.body.style.cssText = `
       position: fixed; 
